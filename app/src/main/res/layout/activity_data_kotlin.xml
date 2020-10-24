@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+</layout>-->
+<!--    <data>
+
+        <variable
+            name="textdata"
+            type="com.example.fixedapp.kotlin.databinding.TextDataK" />
+
+        <variable
+            name="callbackOnclick"
+            type="com.example.fixedapp.kotlin.databinding.DBActivityKotlin.MyClickHandlersKotlin" />
+        <variable
+            name="vi"
+            type="com.example.fixedapp.kotlin.databinding.DBActivityKotlin" />
+
+
+    </data>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_dark">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="95dp"
+            android:layout_height="96dp"
+            android:background="@drawable/background_start"
+            android:text="@string/start"
+
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--
+                    android:onClick="@{(view) -> callback.onCategoryClick(view, textdata)}"
+                               android:onClick="@{(v) -> callback.onToastClicked(v)}"
+                            android:onClick="@{() -> callback.onCategoryClick(textdata)}"
+                            android:onClick="@{callback::onToastClicked}"
+        -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="424dp"
+            android:layout_height="121dp"
+            android:fontFamily="@font/skajs"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@{textdata.des}"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+

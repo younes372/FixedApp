@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.fixedapp.java.TextDataJ" />
+
+
+        <variable
+            name="presenter"
+            type="com.example.fixedapp.java.DBActivityJavaPresenter"/>
+
+<!--        <import type="com.example.fixedapp.utils.AgeYabJ"/>
+
+        <variable
+            name="data"
+            type="com.example.fixedapp.java.TextDataJ" />-->
+
+<!--
+        <variable
+            name="presenter"
+            type="com.example.fixedapp.java.DBActivityJavaPresenter"/>
+-->
+
+   <!--     <variable
+            name="callbackOnclick"
+            type="com.example.fixedapp.java.DBActivityJava.MyClickHandlersJava" />
+-->
+
+     <!--   <variable
+            name="ac"
+            type="com.example.fixedapp.java.DBActivityJava" />
+-->
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_dark">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="95dp"
+            android:layout_height="96dp"
+            android:background="@drawable/background_start"
+            android:text="@{data.text}"
+            android:onClick="@{()-> presenter.onClick(data)}"
+            android:onLongClick="@{(view)-> presenter.onLongClick()}"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--
+            android:onLongClick="@{()-> presenter.onLongClick()}"
+
+          android:onclick="@{() -> presenter.onClickch(textdataJ)}"
+
+            android:onclick="@{(view) -> presenter.onClick(textdataJ)}"
+
+                    android:onClick="@{(view)-> callbackOnclick.onChangeTextClick(view,textdataJ)}"
+
+                    android:onClick="@{(view) -> callback.onCategoryClick(view, textdata)}"
+                               android:onClick="@{(v) -> callback.onToastClicked(v)}"
+                            android:onClick="@{() -> callback.onCategoryClick(textdata)}"
+                            android:onClick="@{callback::onToastClicked}"
+        -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="424dp"
+            android:layout_height="121dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/skajs"
+            android:gravity="center"
+            android:padding="5dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <!-- android:text="@{AgeYabJ.ageFind(textdataJ.age)}"-->
+</layout>
