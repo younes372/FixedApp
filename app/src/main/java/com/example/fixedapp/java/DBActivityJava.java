@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.fixedapp.R;
 import com.example.fixedapp.databinding.ActivityDataJavaBinding;
 import com.example.fixedapp.utils.AgeYab;
+import com.example.fixedapp.utils.AgeYabJ;
 
 
 public class DBActivityJava extends AppCompatActivity implements DBActivityJavaContract.View{
@@ -23,7 +24,7 @@ public class DBActivityJava extends AppCompatActivity implements DBActivityJavaC
     private TextView textView;
 //    private MyClickHandlersJava handlers;
     private DBActivityJavaPresenter handlers;
-   ActivityDataJavaBinding binding;
+    ActivityDataJavaBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +40,13 @@ public class DBActivityJava extends AppCompatActivity implements DBActivityJavaC
 
         data = new TextDataJ();
         data.setText(getResources().getString(R.string.start));
-    //    data.setDes(getResources().getString(R.string.imamali));
+        data.setDes(getResources().getString(R.string.imamali));
+        data.setAge("imam ali");
+
         binding.setData(data);
         binding.setPresenter(handlers);
+      //  binding.setMyAgeYabJ(new AgeYabJ());
+
      //   binding.setAc(this);
     //    binding.setCallbackOnclick(handlers);
     //    binding.setPresenter(handlers);
@@ -58,20 +63,17 @@ public class DBActivityJava extends AppCompatActivity implements DBActivityJavaC
 
     @Override
     public void onToastClicked(DBActivityJavaContract.View view) {
-
+        Toast.makeText(DBActivityJava.this, "onToastClicked", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onClick(DBActivityJavaContract.View view, TextDataJ j) {
-        Toast.makeText(DBActivityJava.this, j.text, Toast.LENGTH_LONG).show();
-    //    Toast.makeText(((Context)view), j.text, Toast.LENGTH_SHORT).show();
-
+        data.setDes(getResources().getString(R.string.imamzman));
     }
 
     @Override
     public boolean onLongClick(DBActivityJavaContract.View v) {
-        Toast.makeText(DBActivityJava.this, "onLongClick", Toast.LENGTH_LONG).show();
-
+        data.setAge(getResources().getString(R.string.Jesus));
         return false;
     }
 
@@ -80,23 +82,23 @@ public class DBActivityJava extends AppCompatActivity implements DBActivityJavaC
 
         Context context;
 
-        public MyClickHandlersJava(Context context) {
+        public void MyClickHandlersJava(DBActivityJavaContract.View view) {
             this.context = context;
         }
 
 
-        public void onToastClicked(View view, DBActivityJava ac ) {
-            Toast.makeText(ac, "Following is clicked!", Toast.LENGTH_SHORT).show();
+        public void onToastClicked(DBActivityJavaContract.View view) {
+            Toast.makeText(DBActivityJava.this, "onToastClicked", Toast.LENGTH_SHORT).show();
         }
 
-        public void onChangeTextClick(View view, TextDataJ j) {
+        public void onClick(DBActivityJavaContract.View view, TextDataJ j) {
           //  data.setDes(getResources().getString(R.string.imamzman));
         }
 
 
 
-        public boolean onLongClickOnHeading(View v) {
-            Toast.makeText(v.getContext(),AgeYab.Companion.ageFind("imam ali"), Toast.LENGTH_LONG).show();
+        public boolean onLongClick(DBActivityJavaContract.View v) {
+            Toast.makeText(DBActivityJava.this,AgeYab.Companion.ageFind("imam ali"), Toast.LENGTH_LONG).show();
          //   data.setAge("imam ali");
             return false;
         }

@@ -5,20 +5,27 @@
 
     <data>
 
+        <import type="com.example.fixedapp.utils.AgeYabJ"/>
+
+<!--
+
+        <variable
+            name="MyAgeYabJ"
+            type="com.example.fixedapp.utils.AgeYabJ" />
+-->
+
         <variable
             name="data"
             type="com.example.fixedapp.java.TextDataJ" />
-
 
         <variable
             name="presenter"
             type="com.example.fixedapp.java.DBActivityJavaPresenter"/>
 
-<!--        <import type="com.example.fixedapp.utils.AgeYabJ"/>
-
-        <variable
-            name="data"
-            type="com.example.fixedapp.java.TextDataJ" />-->
+        <!--
+                <variable
+                    name="data"
+                    type="com.example.fixedapp.java.TextDataJ" />-->
 
 <!--
         <variable
@@ -59,6 +66,11 @@
 
 
         <!--
+
+         <import type="com.example.fixedapp.utils.AgeYabJ"/>
+
+
+
             android:onLongClick="@{()-> presenter.onLongClick()}"
 
           android:onclick="@{() -> presenter.onClickch(textdataJ)}"
@@ -83,7 +95,7 @@
             android:fontFamily="@font/skajs"
             android:gravity="center"
             android:padding="5dp"
-
+            android:text="@{data.des}"
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -99,12 +111,11 @@
             android:layout_marginRight="8dp"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-
+            android:text="@{AgeYabJ.ageFind(data.age)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-   <!-- android:text="@{AgeYabJ.ageFind(textdataJ.age)}"-->
 </layout>
