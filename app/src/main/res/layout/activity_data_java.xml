@@ -5,43 +5,21 @@
 
     <data>
 
-        <import type="com.example.fixedapp.utils.AgeYabJ"/>
 
-<!--
+        <import type="com.example.fixedapp.utils.AgeYabJ" />
 
-        <variable
-            name="MyAgeYabJ"
-            type="com.example.fixedapp.utils.AgeYabJ" />
--->
 
         <variable
             name="data"
             type="com.example.fixedapp.java.TextDataJ" />
 
-        <variable
+ <!--       <variable
             name="presenter"
-            type="com.example.fixedapp.java.DBActivityJavaPresenter"/>
-
-        <!--
-                <variable
-                    name="data"
-                    type="com.example.fixedapp.java.TextDataJ" />-->
-
-<!--
-        <variable
-            name="presenter"
-            type="com.example.fixedapp.java.DBActivityJavaPresenter"/>
+            type="com.example.fixedapp.java.DBActivityJavaPresenter" />
 -->
-
-   <!--     <variable
-            name="callbackOnclick"
+        <variable
+            name="presenter"
             type="com.example.fixedapp.java.DBActivityJava.MyClickHandlersJava" />
--->
-
-     <!--   <variable
-            name="ac"
-            type="com.example.fixedapp.java.DBActivityJava" />
--->
 
     </data>
 
@@ -55,9 +33,9 @@
             android:layout_width="95dp"
             android:layout_height="96dp"
             android:background="@drawable/background_start"
-            android:text="@{data.text}"
             android:onClick="@{()-> presenter.onClick(data)}"
             android:onLongClick="@{(view)-> presenter.onLongClick()}"
+            android:text="@{data.text}"
             android:textColor="@android:color/background_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,25 +43,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <!--
-
-         <import type="com.example.fixedapp.utils.AgeYabJ"/>
-
-
-
-            android:onLongClick="@{()-> presenter.onLongClick()}"
-
-          android:onclick="@{() -> presenter.onClickch(textdataJ)}"
-
-            android:onclick="@{(view) -> presenter.onClick(textdataJ)}"
-
-                    android:onClick="@{(view)-> callbackOnclick.onChangeTextClick(view,textdataJ)}"
-
-                    android:onClick="@{(view) -> callback.onCategoryClick(view, textdata)}"
-                               android:onClick="@{(v) -> callback.onToastClicked(v)}"
-                            android:onClick="@{() -> callback.onCategoryClick(textdata)}"
-                            android:onClick="@{callback::onToastClicked}"
-        -->
         <TextView
             android:id="@+id/textView"
             android:layout_width="424dp"
@@ -109,9 +68,9 @@
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:text="@{AgeYabJ.ageFind(data.age)}"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:text="@{AgeYabJ.ageFind(data.age)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
