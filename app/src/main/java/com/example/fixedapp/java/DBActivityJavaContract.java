@@ -3,18 +3,18 @@ package com.example.fixedapp.java;
 public interface DBActivityJavaContract {
 
     public interface Presenter {
-        void onShowData(TextDataJ dataJ);
+        void onShowData(DataJava dataJ);
     }
 
 
     public interface View {
 
      //   public void onToastClicked(View view, DBActivityJava ac );
-        public void onToastClicked(View view );
+        public void onToastClicked();
 
-        public void onClick(View view, TextDataJ j);
+        public void onClick(DataJava j);
 
-        public boolean onLongClick(View v);
+        public boolean onLongClick();
     }
 
 

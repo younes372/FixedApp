@@ -1,6 +1,6 @@
 package com.example.fixedapp.kotlin.databinding;
 
-public class TextDataK {
+public class DataK {
     private String des;
 
     public String getDes() {

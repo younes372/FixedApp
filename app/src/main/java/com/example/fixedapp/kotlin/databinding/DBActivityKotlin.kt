@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fixedapp.R
-import com.example.fixedapp.java.TextDataJ
+import com.example.fixedapp.java.DataJava
 
 
 class DBActivityKotlin : AppCompatActivity() {
@@ -24,7 +24,7 @@ class DBActivityKotlin : AppCompatActivity() {
             Toast.makeText(ac, "Following is clicked!", Toast.LENGTH_SHORT).show()
         }
 
-        fun onCategoryClick(view: View?, data: TextDataJ) {
+        fun onCategoryClick(view: View?, data: DataJava) {
            Toast.makeText(context, "", Toast.LENGTH_LONG).show()
             data.des = context.resources.getString(R.string.imamzman)
             Toast.makeText(context, data.des, Toast.LENGTH_SHORT).show()

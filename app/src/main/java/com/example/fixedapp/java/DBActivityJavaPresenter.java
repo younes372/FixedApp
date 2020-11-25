@@ -3,6 +3,7 @@ package com.example.fixedapp.java;
 public class DBActivityJavaPresenter {
 
     private DBActivityJavaContract.View view;
+
   //  private DBActivityJava ac;
 /*
     public DBActivityJavaPresenter(DBActivityJavaContract.View view,DBActivityJava ac) {
@@ -12,18 +13,19 @@ public class DBActivityJavaPresenter {
 
     public DBActivityJavaPresenter(DBActivityJavaContract.View view ) {
         this.view = view;
-
     }
 
-    public void onClick(TextDataJ dataJ) {
-        view.onClick(view,dataJ);
-
+    public void onClick(DataJava dataJ) {
+        view.onClick(dataJ);
     }
+
     public boolean onLongClick() {
-        view.onLongClick(view);
+        view.onLongClick();
         return false;
     }
+
     public void onToastClickedp() {
-        view.onToastClicked(view);
+        view.onToastClicked();
     }
+
 }
