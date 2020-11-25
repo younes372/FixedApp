@@ -35,7 +35,7 @@ public class DBActivityJava extends AppCompatActivity {
     private MyClickHandlersJava handlers;
     //private DBActivityJavaPresenter handlers;
     ActivityDataJavaBinding binding;
-    private boolean h=true;
+
 
 
 
